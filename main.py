@@ -5,6 +5,19 @@ from PIL import Image
 import tensorflow as tf
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+import streamlit as st
+
+st.set_page_config(
+    page_title="ReCycle App",
+    page_icon="♻️",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': '''
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+        '''
+    }
+)
 
 app = FastAPI(title="Plastic Classification API")
 
